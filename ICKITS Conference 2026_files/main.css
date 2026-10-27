@@ -238,14 +238,20 @@ h2 {
     padding: 0;
   }
 
+  @media (min-width: 1200px) and (max-width: 1350px){}
   .navmenu ul {
     margin: 0;
     padding: 0;
     display: flex;
     list-style: none;
     align-items: center;
-  }
+  }}
 
+  .navmenu a {
+    font-size: 13px;
+    padding: 8px 4px;
+    white-space: nowrap;
+  }
   .navmenu li {
     position: relative;
   }
@@ -4299,16 +4305,3 @@ p {
   flex-wrap: wrap;
 }
 
-
-/* Fix navbar overflow at 1280px screens */
-@media (min-width: 1200px) and (max-width: 1350px) {
-  .navmenu ul {
-    gap: 10px;
-  }
-
-  .navmenu a {
-    font-size: 13px;
-    padding: 8px 4px;
-    white-space: nowrap;
-  }
-}
