@@ -22,15 +22,20 @@
     0.8
   ); /* Default color used for the majority of the text content across the entire website */
   --heading-color: #e0e9f2; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #1a09d1; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #2009d1; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #1b262c; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #ffffff; /* The default color of the main navmenu links */
-  --nav-hover-color: #1e293b; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* The default color of the main navmenu links */
+  --nav-hover-color: #1D4ED8; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #29343a; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #29343a; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: rgba(
@@ -99,17 +104,17 @@ h2 {
 
 /* PHP Email Form Messages
 ------------------------------*/
-.php-email-form .error-message {
+/* .php-email-form .error-message {
   display: none;
-  background: #df1529;
+  background: #2009d1;
   color: #ffffff;
   text-align: left;
   padding: 15px;
   margin-bottom: 24px;
   font-weight: 600;
-}
+} */
 
-.php-email-form .sent-message {
+/* .php-email-form .sent-message {
   display: none;
   color: #ffffff;
   background: #059652;
@@ -117,8 +122,8 @@ h2 {
   padding: 15px;
   margin-bottom: 24px;
   font-weight: 600;
-}
-
+} */
+/* 
 .php-email-form .loading {
   display: none;
   background: var(--surface-color);
@@ -137,9 +142,9 @@ h2 {
   border: 3px solid var(--accent-color);
   border-top-color: var(--surface-color);
   animation: php-email-form-loading 1s linear infinite;
-}
+} */
 
-@keyframes php-email-form-loading {
+/* @keyframes php-email-form-loading {
   0% {
     transform: rotate(0deg);
   }
@@ -147,7 +152,7 @@ h2 {
   100% {
     transform: rotate(360deg);
   }
-}
+} */
 
 /*--------------------------------------------------------------
 # Global Header
@@ -180,7 +185,7 @@ h2 {
 .header .logo h1 {
   font-size: 20px;
   margin: 0;
-  font-weight: 1000;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   color: var(--heading-color);
@@ -238,20 +243,14 @@ h2 {
     padding: 0;
   }
 
-  @media (min-width: 1200px) and (max-width: 1350px){}
   .navmenu ul {
     margin: 0;
     padding: 0;
     display: flex;
     list-style: none;
     align-items: center;
-  }}
-
-  .navmenu a {
-    font-size: 13px;
-    padding: 8px 4px;
-    white-space: nowrap;
   }
+
   .navmenu li {
     position: relative;
   }
@@ -701,13 +700,14 @@ h2 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: repeating-linear-gradient(
+  /* background-image: repeating-linear-gradient(
     45deg,
     rgba(255, 255, 255, 0.02) 0px,
     rgba(255, 255, 255, 0.05) 1px,
     transparent 1px,
     transparent 10px
-  );
+  ); */
+
   z-index: 1;
 }
 
@@ -824,12 +824,7 @@ section,
     transparent 1px,
     transparent 10px
   ); */
-  /* background:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='40'%3E%3Cpath d='M0 20Q100 0 200 20T400 20V40H0Z' fill='%23ffffff' fill-opacity='.07'/%3E%3C/svg%3E")
-      0 100% / 400px 40px repeat-x,
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='60'%3E%3Cpath d='M0 30Q150 0 300 30T600 30V60H0Z' fill='%23ffffff' fill-opacity='.05'/%3E%3C/svg%3E") -100px
-      100% / 600px 60px repeat-x,
-    linear-gradient(160deg, #0a1a33, #14315c); */
+
   background:
     linear-gradient(
       115deg,
@@ -883,6 +878,7 @@ section,
   line-height: 1.1;
   letter-spacing: -1px;
   margin: 0;
+  color: #22d3ee;
 }
 
 @media (max-width: 1200px) {
@@ -1162,7 +1158,6 @@ section,
 
 .about .about-content p {
   margin-bottom: 1rem;
-  /* font-size: 1.25rem; */
   text-align: justify;
 }
 
@@ -3053,9 +3048,6 @@ section,
   justify-content: space-between;
   margin-bottom: 1.5rem;
 }
-.project-list {
-  font-size: 1.5rem;
-}
 
 .portfolio-details
   .portfolio-details-content
@@ -4111,7 +4103,7 @@ section,
 }
 
 .head-red {
-  color: #08326d;
+  color: var(--accent-color);
 }
 
 .section-title h2.dark-text {
@@ -4134,174 +4126,291 @@ section,
   border-radius: 5px;
 }
 
-.logo img {
-  height: 60px;
-  width: auto;
-  max-width: 220px;
-  object-fit: contain;
-}
-
-.registration-card {
-  max-width: 400px;
-  margin: 30px auto;
-  text-align: center;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.registration-card p {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
-.registration-image {
-  display: block;
-  width: 100%;
-  max-width: 250px;
-  height: auto;
-  margin: 0 auto;
-  object-fit: contain;
-}
-
-.conference-title {
-  color: #22d3ee;
-  font-weight: 800;
-  font-size: 36px;
-  text-align: center;
-  line-height: 1.4;
-  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
-}
-
-.conference-subtitle {
-  color: #22d3ee;
-  font-weight: 800;
-  font-size: 28px;
-  text-align: center;
-  margin-top: 10px;
-}
-
-.aicte-banner {
+/* Header layout and logo-to-navigation spacing */
+#header .header-container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
-  width: 100%;
-  max-width: 700px;
-  margin: 20px auto;
+  justify-content: space-between;
+  gap: 12px;
 }
 
-.aicte-banner img {
-  width: 150px;
+/* Logo */
+#header .logo {
+  flex: 0 0 auto;
+  margin-right: 0;
+}
+
+#header .logo img {
+  display: block;
+  max-width: 180px;
   height: auto;
   object-fit: contain;
 }
 
-.aicte-text {
-  text-align: center;
-  line-height: 1.2;
+/* Navigation */
+#header .navmenu {
+  margin-left: auto;
+  flex: 0 1 auto;
 }
 
-.aicte-name {
-  font-size: 64px;
-  font-weight: bold;
-  color: #fbbf24;
-  font-family: Georgia, serif;
+#header .navmenu ul {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.sponsored-text {
-  font-size: 42px;
-  color: #fbbf24;
-  font-family: Georgia, serif;
+#header .navmenu ul li {
+  white-space: nowrap;
 }
 
-@media (max-width: 460px) {
-  .aicte-banner {
+#header .navmenu ul li a {
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 14px;
+}
+
+/* Medium screens and Nest Hub Max landscape: 1280 x 800
+@media (min-width: 1200px) and (max-width: 1399px) {
+  #header .header-container {
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 8px;
+  }
+
+  #header .logo img {
+    max-width: 145px;
+  }
+
+  #header .navmenu ul {
     gap: 10px;
   }
 
+  #header .navmenu ul li a {
+    font-size: 13px;
+  }
+} */
+
+/* Tablets and mobile: retain the template's mobile menu */
+@media (max-width: 1199px) {
+  #header .navmenu {
+    margin-left: 0;
+  }
+}
+
+/* Reduce the space between logo and navigation */
+#header .header-container {
+  justify-content: flex-start !important;
+  gap: 35px;
+}
+
+#header .logo {
+  margin-right: 0 !important;
+  flex-shrink: 0;
+}
+
+#header .navmenu {
+  margin-left: 0 !important;
+}
+
+#header .navmenu ul {
+  gap: 30px;
+}
+
+/* Keep mobile navigation responsive */
+@media (max-width: 1199px) {
+  #header .header-container {
+    justify-content: space-between !important;
+    gap: 10px;
+  }
+}
+
+/* AICTE logo and text layout */
+.aicte-banner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* gap: 10px; */
+  max-width: 100%;
+}
+
+.aicte-banner img {
+  width: 15%;
+  height: 15%;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+.aicte-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  min-width: 0;
+}
+
+.aicte-name {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #fbbf24;
+}
+
+.sponsored-text {
+  font-size: 25px;
+  line-height: 1.3;
+  color: #fbbf24;text
+}
+
+/* Responsive sizing */
+@media (max-width: 768px) {
+  .aicte-banner {
+    /* gap: 7px; */
+  }
+
   .aicte-banner img {
-    width: 90px;
+    width: 42px;
+    height: 42px;
   }
 
   .aicte-name {
-    font-size: 38px;
+    font-size: 15px;
   }
 
   .sponsored-text {
-    font-size: 25px;
+    font-size: 11px;
   }
 }
-p {
-  /* font-size: 20px; */
-  font-size: 1.5rem;
+
+.registration-card {
+  width: 250px;
+  padding: 15px;
+  margin: 20px auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
-#hero {
-  background-color: #0f0a24;
+
+.registration-card p {
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.registration-image {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.registration-table-wrapper {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  overflow-x: auto;
 }
 
 .registration-table {
-  width: 80%;
+  width: 100%;
   table-layout: fixed;
-  border-collapse: collapse;
+  margin-bottom: 0;
 }
 
 .registration-table th:first-child,
 .registration-table td:first-child {
-  width: 50%;
+  width: 65%;
 }
 
 .registration-table th:last-child,
 .registration-table td:last-child {
-  width: 50%;
+  width: 35%;
 }
 
-/* Fix navigation width specifically for Nest Hub Max */
-/* @media (min-width: 1200px) and (max-width: 1300px) {
-  .header .header-container {
-    width: calc(100% - 20px);
-    max-width: none;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-} */
+.registration-table th,
+.registration-table td {
+  padding: 8px 10px;
+  vertical-align: middle;
+  overflow-wrap: break-word;
+}
 
-@media (min-width: 1200px) and (max-width: 1300px) {
-  .header .header-container {
-    width: calc(100% - 20px);
-    max-width: none;
-    padding-left: 20px;
-    padding-right: 20px;
+@media (max-width: 576px) {
+  .registration-table-wrapper {
+    max-width: 100%;
   }
 
-  .navmenu a,
-  .navmenu a:focus {
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 15px;
+  .registration-table th,
+  .registration-table td {
+    padding: 6px 8px;
+    font-size: 14px;
   }
 }
 
-/* Navbar link hover color */
-.navmenu a:hover {
-  color: #0d6efd !important;
+.registration-table-wrapper {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  overflow-x: auto;
 }
 
-/* Active navbar link color */
-.navmenu a.active {
-  color: #0d6efd !important;
-  font-weight: 600;
-}
-.chief {
-  display: flex;
-  justify-content: center;
-  gap: 100px;
-  flex-wrap: wrap;
-}
-.patrons {
-  display: flex;
-  justify-content: center;
-  gap: 100px;
-  flex-wrap: wrap;
+.registration-table {
+  width: 100%;
+  table-layout: fixed;
+  margin-bottom: 0;
 }
 
+.registration-table th:first-child,
+.registration-table td:first-child {
+  width: 65%;
+}
+
+.registration-table th:last-child,
+.registration-table td:last-child {
+  width: 35%;
+}
+
+.registration-table th,
+.registration-table td {
+  padding: 8px 10px;
+  vertical-align: middle;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 576px) {
+  .registration-table-wrapper {
+    max-width: 100%;
+  }
+
+  .registration-table th,
+  .registration-table td {
+    padding: 6px 8px;
+    font-size: 14px;
+  }
+}
+
+.committee-bg {
+  background-color: #CFDCF0;
+  position: relative;
+  isolation: isolate;
+}
+.committee-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(29, 78, 216, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(29, 78, 216, 0.07) 1px, transparent 1px);
+  background-size: 40px 40px;
+  -webkit-mask-image: radial-gradient(ellipse at center, transparent 35%, #000 90%);
+          mask-image: radial-gradient(ellipse at center, transparent 35%, #000 90%);
+}
