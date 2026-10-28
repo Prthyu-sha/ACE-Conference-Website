@@ -44,7 +44,7 @@
     255,
     0.8
   ); /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #d10910; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #1D4ED8; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -4258,13 +4258,13 @@ section,
   font-size: 50px;
   font-weight: 700;
   line-height: 1.3;
-  color: #fbbf24;
+  color: #570F10;
 }
 
 .sponsored-text {
   font-size: 25px;
   line-height: 1.3;
-  color: #fbbf24;text
+  color: #f71a1e;text
 }
 
 /* Responsive sizing */
@@ -4468,7 +4468,7 @@ section,
 
   .mobile-nav-active .navmenu a:hover,
   .mobile-nav-active .navmenu a.active {
-    color: #ff4d4d;                      /* highlight colour for active/hover */
+    color: #4d5cff;                      /* highlight colour for active/hover */
   }
 
   /* Hamburger / close icon stays on top, top-right */
